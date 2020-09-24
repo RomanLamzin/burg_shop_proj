@@ -1,0 +1,12 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section--align--top {
+  justify-content: flex-start;
+}
+
+.section__title {
+  font-style: 72px;
+}
