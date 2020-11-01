@@ -5,4 +5,9 @@
 .feature__img {
     display: flex;
     justify-content: center;
+    width: 100%;
+
+    @include phones {
+        align-items: flex-start;
+    }
 }

@@ -1,17 +1,28 @@
-@function rem($px) {
-    @return $px / 16px + 0rem;
-  }
-
-
-@mixin tablets {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
+// media
+@mixin desktop {
+	@media screen and (max-width: $desktop) {
+		@content;
+	}
 }
 
+@mixin laptop {
+	@media screen and (max-width: $laptop) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+		@content;
+	}
+}
 
 @mixin phones {
-    @media screen and (max-width: 480px) {
-        @content;
-    }
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
 }

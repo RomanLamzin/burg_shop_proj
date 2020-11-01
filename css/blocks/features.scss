@@ -1,14 +1,42 @@
 .features {
-    background: url(../pic/content/best-bg.jpg) center center / cover no-repeat ; 
+    background: url(../pic/content/best-bg.jpg) center center / cover no-repeat;
 }
 
 
 .features__list {
     display: flex;
     justify-content: space-between;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .features__item {
     width: calc(100% / 3 - 26px);
+    margin-bottom: rem(50px);
+    padding: 0 rem(15px);
+    display: flex;
+    flex-direction: column;
+
+    @include phones {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: rem(25px);
+    }
 }
 
+
+.feature__content {
+    @include phones {
+        text-align: left;
+        margin-left: 10%;
+    }
+}
+
+.feature__title {
+    font-size: rem(24px);
+    @include lifehack;
+    color: $black;
+    margin-bottom: rem(20px);
+  }

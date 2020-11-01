@@ -6,14 +6,27 @@
 
 .order {
     display: flex;
-    
-     .order__form-col {
-         flex:1;
-     }
 
-     .order__form-col:last-child {
-         margin-left: rem(20px);
-     }
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 17%;
+    }
+
+    .order__form-col {
+        flex: 1;
+    }
+
+    .order__form-col:last-child {
+        margin-left: rem(20px);
+
+        @include tablets {
+            margin-left: 0;
+        }
+    }
+
+
+
 }
 
 .order__row {
@@ -44,7 +57,8 @@
 
 
 
-.order__radio , .order__radio--checkbox {
+.order__radio,
+.order__radio--checkbox {
     display: flex;
     align-items: center;
 
@@ -52,5 +66,5 @@
         margin-left: rem(10px);
         padding-right: rem(10px);
     }
-    
+
 }

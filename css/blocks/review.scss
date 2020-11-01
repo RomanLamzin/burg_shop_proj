@@ -9,6 +9,8 @@
             opacity: 1;
             transform: scale(1);
         }
+
+
     }
 }
 
@@ -29,15 +31,40 @@
     object-fit: cover;
 }
 
+.review__userName {
+    @include gagalin();
+}
+
 .review__hover {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
+    top: 10%;
+    left: 10%;
+    font-size: rem(14px);
     opacity: 0;
+    transform: scale(.7);
+    transition: .3s;
 
-    transform: scale(.8);
-    transition: .4s;
+    @include tablets {
+
+        text-align: center;
+        font-size: rem(10px);
+        width: 80%;
+    }
+
+    @include phones {
+
+        .review__userName {
+            font-size: 1rem;
+            padding-bottom: 4%;
+        }
+
+
+        .review__content {
+            display: none;
+        }
+
+    }
+
+
 }
+

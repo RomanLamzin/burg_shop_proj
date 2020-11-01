@@ -1,3 +1,16 @@
 .menu__burgers {
     background: url('../../pic/content/burger_bg_1.jpg') center center / cover no-repeat;
+    position: relative;
 }
+
+.section__title_white {
+    color: #fff;
+}
+
+.menu__title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+
